@@ -12,7 +12,10 @@ import movieLibReducer from "./movieLibSlice";
 const rootReducer = combineReducers({
   [movieApi.reducerPath]: movieApi.reducer,
   addMovie: movieLibReducer,
-  // clearLibrary: movieLibReducer
+  clearLibrary: movieLibReducer,
+  deleteMovie: movieLibReducer,
+  checkLibrary: movieLibReducer
+
 
 })
 

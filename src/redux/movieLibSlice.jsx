@@ -4,19 +4,26 @@ const initialState = {
     list: []
 };
 
-export const movieLibSlice = createSlice({
+const movieLibSlice = createSlice({
     name: 'library',
     initialState,
     reducers: {
         addMovie(state, action) {
-            !state.list.includes(action.payload) && state.list.push(action.payload)
+            if (state.list.find(item => item.id === action.payload.id)) {alert('This movie is already in your Library')}
+            else { state.list.push(action.payload) }
+            
+            
         },
-        // clearLibrary(state) {state = []}
+        clearLibrary(state) { state.list = [] },
+        deleteMovie(state, action) {
+            state.list = state.list.filter(item => item.id !== action.payload.id )
+         },
+        checkLibrary (state, action) {state.list.some(item => item.id === action.payload.id)}
         
     }
     
 })
 
-export const { addMovie } = movieLibSlice.actions;
+export const { addMovie, clearLibrary, deleteMovie, checkLibrary } = movieLibSlice.actions;
 
 export default movieLibSlice.reducer;

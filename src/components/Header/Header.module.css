@@ -1,0 +1,7 @@
+.header {
+    background-color: black;
+    background-image: url(/src/images/1920x1080_px_Star_Wars-784551.jpg);
+    background-position: top;
+    background-size: cover;
+    min-height: 100px;
+}
