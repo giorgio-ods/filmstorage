@@ -11,6 +11,7 @@ import { NavBar } from './pages/NavBar/NavBar';
 import { SingleMovieInfo } from './pages/SingleMovieInfo/SingleMovieInfo';
 import Container from './components/Container/Container';
 import Header from './components/Header/Header';
+import { SearchResultsPage } from './pages/SearchResultsPage/SearchResultsPage';
 
 // import {TrendingList2 } from './pages/TrendingList/TrendingList2'
 
@@ -29,7 +30,8 @@ function App() {
         <Route path='/' element={ <HomePage /> } />
         <Route path='/library' element={ <MyLibrary /> } />
         <Route path='*' element={<NotFoundPage />} />
-        <Route path='/movies/:movieId' element={<SingleMovieInfo />} />
+          <Route path='/movies/:movieId' element={<SingleMovieInfo />} />
+          <Route path='/search' element={ <SearchResultsPage /> } />
       </Routes>
       </div>
       </Container>

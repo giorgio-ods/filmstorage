@@ -8,15 +8,15 @@ import { persistStore, persistReducer, FLUSH,
 import storage from 'redux-persist/lib/storage'
 import { movieApi } from "./movieApi";
 import movieLibReducer from "./movieLibSlice";
+import movieSearchReducer from "./movieSearch";
 
 const rootReducer = combineReducers({
   [movieApi.reducerPath]: movieApi.reducer,
   addMovie: movieLibReducer,
   clearLibrary: movieLibReducer,
   deleteMovie: movieLibReducer,
-  checkLibrary: movieLibReducer
-
-
+  checkLibrary: movieLibReducer,
+  searchValue: movieSearchReducer
 })
 
 const persistConfig = {

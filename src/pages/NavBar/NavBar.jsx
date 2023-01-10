@@ -8,8 +8,10 @@ export function NavBar() {
                         <div className={styles.navbar}>                
         <Link to='/'>Trends</Link>
         <Link to='/library'>My Watchlist</Link>
-            </div>
-                <SearchForm />
+                </div>
+                <div className={styles.searchbox}>
+                    <SearchForm />
+                    </div>
         
         </>
     )

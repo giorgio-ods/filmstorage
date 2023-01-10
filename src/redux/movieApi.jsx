@@ -17,10 +17,7 @@ export const movieApi = createApi({
             query: (id) => `/tv/${id}?api_key=11fad27138e60ff4ac198d4feaa381ed`
         }),
         searchMovie: builder.query({
-            query: (q) => `/search/movie?api_key=11fad27138e60ff4ac198d4feaa381ed?query=${q}`,
-                
-                                  
-            
+            query: (q) => `/search/movie?api_key=11fad27138e60ff4ac198d4feaa381ed&query=${q}`,
         }),
         
     })
