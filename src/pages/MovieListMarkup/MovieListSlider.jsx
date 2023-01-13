@@ -11,7 +11,9 @@ const baseUrl = 'https://image.tmdb.org/t/p/w500'
 export function MovieListSlider({ items }) {
     
     console.log(items)
-
+    if (items.length === 0) {
+        return (<h2>Sorry, no movies found</h2>)
+    }
     return (
         <>
             
@@ -41,7 +43,7 @@ export function MovieListSlider({ items }) {
         
 </Swiper>
 
-                {/* <Route path={"/movies/:movieId"} element={ <SingleMovieInfo /> } ></Route> */}
+              
                               
                 </div>
                 

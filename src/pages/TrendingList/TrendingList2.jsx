@@ -1,14 +1,5 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import { Routes, Route, Link, useMatch } from "react-router-dom";
 import { useGetTrendingMoviesQuery, useGetTrendingSeriesQuery } from "../../redux/movieApi";
 import { MovieListSlider } from "../MovieListMarkup/MovieListSlider";
-import { NotFoundPage } from "../NotFoundPage/NotFoundPage";
-import { TrendingListMarkup } from "./TrendingListMarkup";
-
-
-
-
 
 export function TrendingList2() {
     const { data, isFetching } = useGetTrendingMoviesQuery('');

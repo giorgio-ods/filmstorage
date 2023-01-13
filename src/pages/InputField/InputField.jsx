@@ -9,4 +9,4 @@ const InputField = ({ movie, handleInput, handleSubmit }) => {
     )
 }
 
-export default InputField
+export default InputField;

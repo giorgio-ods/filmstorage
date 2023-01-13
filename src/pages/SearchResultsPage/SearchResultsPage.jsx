@@ -6,7 +6,7 @@ export const SearchResultsPage = () => {
     const value = useSelector((state) => state.searchValue.value)
     
     const { data } = useSearchMovieQuery(value);
-    console.log(value);
+    
     return (
         <>
             <div style={{
@@ -19,7 +19,9 @@ export const SearchResultsPage = () => {
                     paddingTop: '20px'
 
                 }} >
-                {data && <MovieListSlider items={data.results} />}
+                    {data && <MovieListSlider items={data.results} />}
+                    
+                    
                 </div>
             </div>
                 

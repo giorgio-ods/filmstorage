@@ -7,7 +7,6 @@ import { useGetTrendingMoviesQuery, useGetTrendingSeriesQuery } from "../../redu
 
 export function TrendingList() {
     const { data, isLoading } = useGetTrendingMoviesQuery();
-    // const { data: dataTv, isLoading: isLoadingTv } = useGetTrendingSeriesQuery();
     const baseUrl = 'https://image.tmdb.org/t/p/w500'
     console.log(data);
 
